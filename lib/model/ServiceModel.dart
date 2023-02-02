@@ -146,7 +146,7 @@ class Region {
   String? distanceUnit;
   int? id;
   String? name;
-  int? status;
+  String? status;
   String? timezone;
   String? updatedAt;
 

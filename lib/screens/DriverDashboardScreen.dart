@@ -238,7 +238,7 @@ class DriverDashboardScreenState extends State<DriverDashboardScreen> {
       "is_online": status,
     };
     await updateStatus(req).then((value) {
-      sharedPref.setInt(IS_ONLINE, value.data!.is_online!);
+      sharedPref.setString(IS_ONLINE, value.data!.is_online!);
       appStore.setLoading(false);
     }).catchError((error) {
       appStore.setLoading(false);

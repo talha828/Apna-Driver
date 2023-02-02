@@ -56,7 +56,7 @@ Future<LoginResponse> signUpApi(Map request) async {
     await sharedPref.setInt(USER_ID, loginResponse.data!.id!);
     await sharedPref.setString(USER_PROFILE_PHOTO, loginResponse.data!.profile_image.validate());
     await sharedPref.setString(GENDER, loginResponse.data!.gender.validate());
-    await sharedPref.setInt(IS_ONLINE, loginResponse.data!.is_online ?? 0);
+    await sharedPref.setString(IS_ONLINE, loginResponse.data!.is_online ?? "0");
     await sharedPref.setString(UID, loginResponse.data!.uid.validate());
     await sharedPref.setString(LOGIN_TYPE, loginResponse.data!.login_type.validate());
     await sharedPref.setInt(IS_Verified_Driver, loginResponse.data!.is_verified_driver ?? 0);
@@ -99,7 +99,7 @@ Future<LoginResponse> logInApi(Map request, {bool isSocialLogin = false}) async 
     await sharedPref.setInt(USER_ID, loginResponse.data!.id ?? 0);
     await sharedPref.setString(USER_PROFILE_PHOTO, loginResponse.data!.profile_image.validate());
     await sharedPref.setString(GENDER, loginResponse.data!.gender.validate());
-    await sharedPref.setInt(IS_ONLINE, loginResponse.data!.is_online ?? 0);
+    await sharedPref.setString(IS_ONLINE, loginResponse.data!.is_online ?? "0");
     await sharedPref.setInt(IS_Verified_Driver, loginResponse.data!.is_verified_driver ?? 0);
     await sharedPref.setString(UID, loginResponse.data!.uid.validate());
     await sharedPref.setString(LOGIN_TYPE, loginResponse.data!.login_type.validate());

@@ -35,7 +35,7 @@ class UserData {
   String? first_name;
   String? gender;
   var id;
-  int? is_online;
+  String? is_online;
   int? is_verified_driver;
   String? last_name;
   String? last_notification_seen;
@@ -44,7 +44,7 @@ class UserData {
   String? longitude;
   String? player_id;
   String? profile_image;
-  int? service_id;
+  String? service_id;
   String? status;
   String? timezone;
   String? uid;
