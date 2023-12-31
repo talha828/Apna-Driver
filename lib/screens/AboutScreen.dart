@@ -52,6 +52,7 @@ class AboutScreenState extends State<AboutScreen> {
             Text(mAppName, style: primaryTextStyle(size: 20)),
             SizedBox(height: 8),
             FutureBuilder<PackageInfo>(
+
               future: PackageInfo.fromPlatform(),
               builder: (_, snap) {
                 if (snap.hasData) {
